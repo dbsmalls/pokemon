@@ -13,66 +13,75 @@ func (p *Pokemon) String() string {
 
 func main() {
 
-	fmt.Println("My Ten Favorite Pokemon and Their Types...")
+		fmt.Println("My Ten Favorite Pokemon and Their Types...")
 
-	mewtwo := &Pokemon{
+	mewtwo := Pokemon{
 		Name:    "Mewtwo",
 		Element: "Psychic",
 	}
 
-	alakazam := &Pokemon{
+	alakazam := Pokemon{
 		Name:    "Alakazam",
 		Element: "Psychic",
 	}
 
-	haunter := &Pokemon{
+	haunter := Pokemon{
 		Name:    "Haunter",
 		Element: "Poison, Ghost",
 	}
 
-	charizard := &Pokemon{
+	charizard := Pokemon{
 		Name:    "Charizard",
 		Element: "Fire, Flying",
 	}
 
-	gyarados := &Pokemon{
+	gyarados := Pokemon{
 		Name:    "Gyarados",
 		Element: "Water, Flying",
 	}
 
-	onix := &Pokemon{
+	onix := Pokemon{
 		Name:    "Onix",
 		Element: "Ground, Rock",
 	}
 
-	scyther := &Pokemon{
+	scyther := Pokemon{
 		Name:    "Scyther",
 		Element: "Bug, Flying",
 	}
 
-	kabutops := &Pokemon{
+	kabutops := Pokemon{
 		Name:    "Kabutops",
 		Element: "Rock, Water",
 	}
 
-	zapdos := &Pokemon{
+	zapdos := Pokemon{
 		Name:    "Zapdos",
 		Element: "Electric, Flying",
 	}
 
-	ditto := &Pokemon{
+	ditto := Pokemon{
 		Name:    "Ditto",
 		Element: "Normal",
 	}
 
-	fmt.Println(mewtwo)
-	fmt.Println(alakazam)
-	fmt.Println(haunter)
-	fmt.Println(charizard)
-	fmt.Println(gyarados)
-	fmt.Println(onix)
-	fmt.Println(scyther)
-	fmt.Println(kabutops)
-	fmt.Println(zapdos)
-	fmt.Println(ditto)
+	ps := []Pokemon{
+		mewtwo,
+		alakazam,
+		haunter,
+		charizard,
+		gyarados,
+		onix,
+		scyther,
+		kabutops,
+		zapdos,
+		ditto,
+	}
+
+	//fmt.Println(ps)
+	for _, pokemon := range ps {
+
+	//fmt.Println(idx)
+	fmt.Printf("Pokemon: %s, Type: %s\n", pokemon.Name, pokemon.Element)
+	}
 }
